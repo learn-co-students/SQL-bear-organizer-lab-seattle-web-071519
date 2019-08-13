@@ -1,3 +1,6 @@
+
+
+
 describe 'populating the bears table' do
   before do
     @db = SQLite3::Database.new(':memory:')
@@ -14,3 +17,4 @@ describe 'populating the bears table' do
     expect(@db.execute("SELECT COUNT(*) FROM bears WHERE name IS NULL;").flatten[0]).to eq(1)
   end
 end
+
